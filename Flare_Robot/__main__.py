@@ -81,7 +81,7 @@ FLARE_PHOTO = "https://telegra.ph/file/a69a3b095a839fbad2ead.jpg"
 PM_START_TEXT = """
 ────「 {} 」────
 *Hey! My Cutee 🥰 {},*
-* I am an Anime themed advance group management bot with a lots of Features.*
+* I am an Anime themed advance group management bot with a lots of Features by @wCommie and my Chat Gc is @Domain_Exp.*
 ➖➖➖➖➖➖➖➖➖➖➖
 • *Uptime:* `{}`
 ➖➖➖➖➖➖➖➖➖➖➖
@@ -107,20 +107,20 @@ buttons = [
     [
                         InlineKeyboardButton(
                             text=f"Add Marin To Your Group",
-                            url=f"https://telegram.dog/Marin_Kitagawa_xbot?startgroup=true")
+                            url=f"https://telegram.dog/xmarinxbot?startgroup=true")
                     ],
                    [
                        InlineKeyboardButton(text="[►Features◄]", callback_data="help_back"),
-                       InlineKeyboardButton(text="❔ Chit Chat ", url="https://t.me/bestwalefriends"),
+                       InlineKeyboardButton(text="❔ Chit Chat ", url="https://t.me/domain_exp"),
                        InlineKeyboardButton(text="[► Inline ◄]", switch_inline_query_current_chat=""),
                      ],
                     [                  
                        InlineKeyboardButton(
                              text="🚑 Support",
-                             url=f"https://t.me/Marin_Support"),
+                             url=f"https://t.me/wCommie"),
                        InlineKeyboardButton(
                              text="Owner-Sama",
-                             url="https://t.me/Asta_Silva_02")
+                             url="https://t.me/wCommie")
                      ], 
     ]
 
@@ -201,13 +201,13 @@ async def awake(event):
   ғʟᴀʀᴇ = "**♡ I,m Marin ʀᴏʙᴏᴛ 愛** \n\n"
   ғʟᴀʀᴇ += "**♡ I'm Working With Gyaaru Speed**\n\n"
   ғʟᴀʀᴇ += "**♡ Marin: LATEST Version**\n\n"
-  ғʟᴀʀᴇ += "**♡ My Creator:** [Panda](t.me/@{OWNER_USERNAME})\n\n"
-  ғʟᴀʀᴇ += "**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Marin_Support **\n\n"
+  ғʟᴀʀᴇ += "**♡ My Creator:** [wCommie](t.me/@{OWNER_USERNAME})\n\n"
+  ғʟᴀʀᴇ += "**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Domain_exp **\n\n"
   ғʟᴀʀᴇ += "**♡ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💘💘💘**\n\n"
   FLARE_BUTTON = [
       [
           Button.url("🚑 Support", f"https://t.me/{SUPPORT_CHAT}"),
-          Button.url("Owner-sama", "https://t.me/im_the_ownerr")
+          Button.url("Owner-sama", "https://t.me/wCommie")
       ]
   ]
   await telethn.send_file(
@@ -265,7 +265,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_animation(
-            GROUP_START_IMG, caption= "I won't sleep until I satisfy you!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            GROUP_START_IMG, caption= "I won't sleep until I satisfy you! maybe what you thinking uwu \n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -274,11 +274,11 @@ def start(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="🚑 Support",
-                            url=f"https://telegram.dog/Marin_Support",
+                            url="https://telegram.dog/wCommie",
                         ),
                         InlineKeyboardButton(
                             text="Owner Sama",
-                            url="https://t.me/im_the_ownerr",
+                            url="https://t.me/wCommie",
                         ),
                     ]
                 ]
@@ -397,7 +397,7 @@ def get_help(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text="Help",
-                                url="t.me/Marin_Kitagawa_xbot?start=ghelp_{}".format(
+                                url="t.me/xmarinxbot?start=ghelp_{}".format(
                                     context.bot.username, module,
                                 ),
                             ),
@@ -413,7 +413,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="Help",
-                            url="t.me/Marin_Kitagawa_xbot?start=help".format(context.bot.username),
+                            url="t.me/xmarinxbot?start=help".format(context.bot.username),
                         ),
                     ],
                 ],
@@ -697,7 +697,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Marin_Kitagawa_xbot is deployed successfully!")
+        LOGGER.info("XMarinXBot is deployed successfully!")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
